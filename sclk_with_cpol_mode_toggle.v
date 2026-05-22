@@ -8,22 +8,10 @@ module top;
     reg cpol = 1;
     reg spi_t = 0, spi_l = 0;
 
-    always #5 clk = ~clk;
-
-    initial begin
-        @(posedge clk);
-        start = 1;
-        #11;
-        start = 0;
-    end
-
-    initial begin
-        $dumpfile("dump.vcd");
-        $dumpvars;
-        repeat(40) @(posedge clk);
-        $finish;
-    end
-
+    
+//SCLK LOGIC
+//SPI_clk = 1/4*freq_system_clk
+//1 bit will be transferred in 4 system clock cycles
     always @(posedge clk) begin
         if (start) begin
             ready <= 0;
@@ -58,5 +46,22 @@ module top;
             spi_l <= 0;
             sclk <= cpol;
         end
+    end
+    
+//SCLK STIMULUS//
+    always #5 clk = ~clk;
+
+    initial begin
+        @(posedge clk);
+        start = 1;
+        #11;
+        start = 0;
+    end
+
+    initial begin
+        $dumpfile("dump.vcd");
+        $dumpvars;
+        repeat(40) @(posedge clk);
+        $finish;
     end
 endmodule
