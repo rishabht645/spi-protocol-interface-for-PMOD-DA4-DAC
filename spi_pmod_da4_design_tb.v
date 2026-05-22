@@ -15,7 +15,7 @@ module tb;
     
     initial begin
     st_wrt = 1;
-    data_in = 12'b101010101010; 
+    data_in = 12'b101010101010; //INPUT 12 BITS OF DATA 
     end
 
     initial begin
