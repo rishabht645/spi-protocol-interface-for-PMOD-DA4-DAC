@@ -29,6 +29,9 @@ A hardware implementation of the SPI protocol to interface with the Digilent PMO
 ## PMOD DA4 DAC
 
 <!-- Add an image of the PMOD DA4 board here -->
+<p align="center">
+  <img width="707" height="386" alt="Screenshot 2026-05-23 at 9 06 54 AM" src="https://github.com/user-attachments/assets/b1a8176e-93c5-4bb1-9997-6c54bd177fa2" />
+</p>
 
 The Digilent PMOD DA4 is an 8-channel, 12-bit Digital-to-Analog Converter based on the AD5628 chip. It communicates over SPI and accepts 32-bit frames consisting of:
 
@@ -54,9 +57,21 @@ The top module `spi_pmod_da4` implements a 4-state FSM:
 
 ---
 
-## RTL Schematic
+## Waveform generation
+<p align="center">
+  <img width="777" height="406" alt="Screenshot 2026-05-23 at 9 42 30 AM" src="https://github.com/user-attachments/assets/405e5348-0602-4d7f-95eb-cfeb16c343f8" />
+</p>
 
+The waveform was generated using [GTKwave](https://github.com/gtkwave/gtkwave). The output behaviour can be analysed here.
+
+---
+
+## RTL Schematic
+  
 <!-- Add spi_pmod_da4_schematic.svg here -->
+<p align="center">
+  <img width="1118" height="688" alt="Screenshot 2026-05-23 at 9 09 14 AM" src="https://github.com/user-attachments/assets/fb99d2fb-4918-44ca-8bd0-9f915e647989" />
+</p>
 
 The RTL schematic was generated using [Yosys](https://github.com/YosysHQ/yosys) and [netlistsvg](https://github.com/nturley/netlistsvg). It shows the synthesized logic including the FSM state registers, multiplexers, adders, and output logic.
 
