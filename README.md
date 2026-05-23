@@ -1,3 +1,4 @@
+
 # SPI Protocol Interface for PMOD DA4 DAC
 
 A hardware implementation of the SPI protocol to interface with the Digilent PMOD DA4 Digital-to-Analog Converter, written in Verilog. The design includes a fully functional SPI master, DAC initialization logic, and a finite state machine for data transmission.
@@ -145,6 +146,7 @@ nextpnr-ice40 --hx8k --json spi_pmod_da4.json --pcf-allow-unconstrained --gui
 
 Then in the nextpnr console at the top, click the "PACK", "PLACE" and "ROUTE" buttons in that order
 
+<img width="444" height="131" alt="Screenshot 2026-05-23 at 8 49 47 AM" src="https://github.com/user-attachments/assets/9bb29245-dfac-4993-9b57-d5a9750182df" />
 
 ---
 
