@@ -79,8 +79,10 @@ The RTL schematic was generated using [Yosys](https://github.com/YosysHQ/yosys) 
 
 ## FPGA Layout
 
-<!-- Add nextpnr screenshot here -->
 
+<p align="center">
+  <img width="1023" height="759" alt="Screenshot 2026-05-23 at 11 20 53 AM" src="https://github.com/user-attachments/assets/5c7b75d9-f7d1-4c9a-9acf-35e2fe2077e2" />
+</p>
 The design was placed and routed on a Lattice iCE40HX8K FPGA using [nextpnr](https://github.com/YosysHQ/nextpnr). The layout shows the physical placement of LUTs and flip-flops on the FPGA fabric along with the routing wires connecting them.
 
 ---
