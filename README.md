@@ -146,7 +146,10 @@ nextpnr-ice40 --hx8k --json spi_pmod_da4.json --pcf-allow-unconstrained --gui
 
 Then in the nextpnr console at the top, click the "PACK", "PLACE" and "ROUTE" buttons in that order
 
-<img width="444" height="131" alt="Screenshot 2026-05-23 at 8 49 47 AM" src="https://github.com/user-attachments/assets/9bb29245-dfac-4993-9b57-d5a9750182df" />
+
+<p align="center">
+  <img width="444" height="131" alt="Screenshot 2026-05-23 at 8 49 47 AM" src="https://github.com/user-attachments/assets/9bb29245-dfac-4993-9b57-d5a9750182df" />
+</p>
 
 ---
 
