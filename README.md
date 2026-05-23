@@ -31,10 +31,10 @@ A hardware implementation of the SPI protocol to interface with the Digilent PMO
 
 The Digilent PMOD DA4 is an 8-channel, 12-bit Digital-to-Analog Converter based on the AD5628 chip. It communicates over SPI and accepts 32-bit frames consisting of:
 
-- 4-bit command field — specifies the operation (write, update, etc.)
-- 4-bit address field — selects the DAC channel
-- 12-bit data field — the analog value to output
-- 8-bit padding — zero-filled
+- 4-bit command field : specifies the operation (write, update, etc.)
+- 4-bit address field : selects the DAC channel
+- 12-bit data field : the analog value to output
+- 8-bit padding : zero-filled
 
 Before sending DAC data, the device requires a one-time initialization sequence to configure its internal reference voltage and operating mode.
 
@@ -46,10 +46,10 @@ The system clock runs at 100MHz, which is divided down to 1MHz to serve as the S
 
 The top module `spi_pmod_da4` implements a 4-state FSM:
 
-- `IDLE` — waits for the `st_wrt` signal, routes to INITIAL or DAC_DATA based on whether the DAC has been initialized
-- `INITIAL` — sends the 32-bit DAC initialization frame (`0x08000001`) over MOSI
-- `DAC_DATA` — prepares the 32-bit data frame (`{0x030, data_in, 0x00}`)
-- `SEND_DATA` — serially transmits the data frame bit by bit, MSB first, with CS held low
+- `IDLE` - waits for the `st_wrt` signal, routes to INITIAL or DAC_DATA based on whether the DAC has been initialized
+- `INITIAL` - sends the 32-bit DAC initialization frame (`0x08000001`) over MOSI
+- `DAC_DATA` - prepares the 32-bit data frame (`{0x030, data_in, 0x00}`)
+- `SEND_DATA` - serially transmits the data frame bit by bit, MSB first, with CS held low
 
 ---
 
